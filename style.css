@@ -1,0 +1,124 @@
+body {
+  background: #181a20;
+  color: #f3f3f7;
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background 0.3s;
+}
+
+#app {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #23262f;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.25);
+  padding: 2rem 1.5rem;
+  margin: 2rem 0;
+  max-width: 420px;
+  width: 100%;
+  transition: box-shadow 0.3s, transform 0.2s;
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+input, button, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+input[type="text"], textarea {
+  background: #181a20;
+  color: #f3f3f7;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0 1rem 0;
+  width: 100%;
+  border: 1px solid #353945;
+  transition: border 0.2s;
+}
+input[type="text"]:focus, textarea:focus {
+  border: 1.5px solid #6c47ff;
+}
+
+button {
+  background: linear-gradient(90deg, #6c47ff 0%, #3a8fff 100%);
+  color: #fff;
+  padding: 0.75rem 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 8px rgba(108,71,255,0.12);
+  transition: background 0.2s, transform 0.1s;
+}
+button:active {
+  transform: scale(0.97);
+}
+
+h1, h2, h3 {
+  font-family: 'Fira Mono', monospace;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.code-block {
+  background: #181a20;
+  color: #fffae3;
+  font-family: 'Fira Mono', monospace;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  white-space: pre;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.feedback {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem 0;
+  min-height: 1.5em;
+  transition: color 0.2s;
+}
+.feedback.correct {
+  color: #3fff7f;
+}
+.feedback.wrong {
+  color: #ff4b6e;
+}
+
+.timer {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #3a8fff;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  .code-block {
+    font-size: 0.98rem;
+    padding: 0.7rem;
+  }
+} 
